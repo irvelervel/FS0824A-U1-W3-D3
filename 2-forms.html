@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavoriamo con i form (in JS!)</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Il nostro primo vero form!</h1>
+    </header>
+    <main>
+      <form>
+        <div>
+          <label for="brand">Marca</label>
+          <input
+            id="brand"
+            placeholder="Apple, Samsung etc."
+            type="text"
+            required
+            minlength="1"
+            maxlength="100"
+          />
+        </div>
+        <div>
+          <label for="model">Modello</label>
+          <input
+            id="model"
+            placeholder="iPhone 24, Galaxy S45 Ultra"
+            type="text"
+            required
+            minlength="1"
+            maxlength="100"
+          />
+        </div>
+        <div>
+          <label for="price">Prezzo in euro</label>
+          <input id="price" type="number" placeholder="100" required min="1" />
+        </div>
+        <div>
+          <button>INVIA!</button>
+          <!-- questo bottone sta GIÀ cercando di INVIARE il FORM! -->
+          <!-- ...perchè si trova dentro un tag <form> -->
+          <!-- un bottone dentro ad un form riceve AUTOMAGICAMENTE un type="submit" -->
+          <button type="button" id="kittens">GATTINI!</button>
+          <!-- se voglio invece che un bottone dentro il form NON invii automaticamente
+           il form, devo attribuirgli A MANO un type="button" -->
+          <button type="reset">AZZERA</button>
+        </div>
+      </form>
+    </main>
+    <script src="2-forms.js"></script>
+  </body>
+</html>

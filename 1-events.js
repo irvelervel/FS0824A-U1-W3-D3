@@ -39,3 +39,38 @@ newButton.onclick = testFunction
 
 // e) appendo il newButton dentro parentDiv
 parentDiv.appendChild(newButton)
+newButton.on
+
+// per il 3° metodo (che è una variante del 2°) utilizzeremo NON le proprietà "onclick",
+// "onscroll", "onsubmit" degli elementi ma un generico metodo chiamato "addEventListener"
+// rifaccio i passaggi per creare un bottone
+const newButton2 = document.createElement('button') // <button></button>
+newButton2.innerText = 'CLICK!'
+const parentDiv2 = document.getElementById('third-button-area')
+
+// NON utilizzo onclick ma addEventListener
+// il primo parametro è il tipo di evento, ovvero l'event listener senza la particella "on"
+newButton2.addEventListener('click', testFunction)
+// newButton2.addEventListener('click', function (e) {
+//   console.log(e)
+// })
+newButton2.addEventListener('dblclick', function () {
+  console.log('QUESTO ERA UN DOPPIO CLICK')
+})
+
+// appendo l'ultimo bottone
+parentDiv2.appendChild(newButton2)
+
+// consiglio spassionato: utilizzate i metodi 1) se avete già il tag in HTML, 3) se non ce l'avete
+
+// inseriamo anche un evento di mouseover
+// recuperiamo un riferimento all'h1
+const h1 = document.getElementsByTagName('h1')[0]
+h1.addEventListener('mouseover', function (e) {
+  h1.style.color = 'red'
+  alert('sorpresa!')
+})
+
+h1.addEventListener('mouseleave', function (e) {
+  h1.style.color = 'black'
+})
