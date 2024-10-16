@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventi in JS</title>
+  </head>
+  <body>
+    <header>
+      <h1>EVENTI & EVENT LISTENERS</h1>
+    </header>
+    <main>
+      <p>
+        Gli eventi in JS vengono tipicamente scatenati dalle interazioni con
+        l'utente (es. click su un bottone, scroll della pagina, invio di un form
+        etc.)
+      </p>
+      <p>
+        Voi, da sviluppatore FE, dovete avere il pieno controllo di quello che
+        succede: per farlo, potete impostare degli "event listeners" ("trappole
+        per orsi")
+      </p>
+      <p>
+        Gli event listeners sono tipicamente nominati con la particella "on" +
+        nome dell'evento ("onclick", "onsubmit").
+      </p>
+      <section>
+        <h3>METODI PER COLLEGARE UN EVENT LISTENER AD UN PULSANTE</h3>
+        <div>
+          <h4>1° - EVENT LISTENER APPLICATO VIA HTML</h4>
+          <button onclick="firstButtonClick(event)">CLICK!</button>
+        </div>
+        <div id="second-button-area">
+          <h4>2° - ONCLICK APPLICATO VIA JS</h4>
+          <!-- il bottone qui ancora non c'è! -->
+        </div>
+        <div id="third-button-area">
+          <h4>3° - ADDEVENTLISTENER APPLICATO VIA JS</h4>
+          <!-- il bottone qui ancora non c'è! -->
+        </div>
+      </section>
+    </main>
+    <script src="./1-events.js"></script>
+  </body>
+</html>
